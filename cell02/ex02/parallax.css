@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+
+.first_block{
+    background-image: url("./rain.jpg");
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;           /* enables flexbox */
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+}
+
+.second_block{
+    background-color: black;
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;           /* enables flexbox */
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+}
+
+.third_block{
+    background-image: url("./snow.jpg");
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;           /* enables flexbox */
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+}
+
+p{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(3, 34, 32, 0.7);
+    padding: 15px;
+}

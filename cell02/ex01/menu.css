@@ -1,0 +1,51 @@
+h1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    width: 40px;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+}
+
+.button div {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(17, 118, 131);
+  margin: 4px auto;
+  border-radius: 3px;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    background: rgb(17, 118, 131);
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 100px;
+}
+
+.button:hover .menu{
+    display: block;
+}
+
+.menu p{
+    display: block;
+    color: white;
+    cursor: pointer;
+}
+
+.container{
+    position: relative;
+    justify-content: center;
+    width: 40px;
+    margin: 0 auto;
+}

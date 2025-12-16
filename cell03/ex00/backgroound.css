@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-height: 100vh;
+}
+
+button{
+    background-color: rgb(0, 255, 213);
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: rgb(197, 0, 0);
+    color: red;
+}
