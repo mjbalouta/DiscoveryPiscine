@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's over 9000</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+        .calc
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+        }
+        .calc input
+        {
+            margin: 5px;
+        }
+        .calc select
+        {
+            height: 21px;
+        }
+        h1
+        {
+            text-align: center;
+        }
+        .button
+        {
+            background-color: rgb(28, 55, 114);
+            color: white;
+            border: none;
+            height: 22px;
+            border-radius: 5px;
+            padding: 3px 18px;
+            text-align: center;
+        }
+        .container
+        {
+            background-color: rgb(204, 245, 245);
+            padding: 40px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <div class="calc">
+            <input type="text" id="firstNumber">
+            <select name="operation" id="operation">
+                <option value="add">+</option>
+                <option value="sub">-</option>
+                <option value="multi">*</option>
+                <option value="div">/</option>
+                <option value="mod">%</option>
+            </select>
+            <input type="text" id="secondNumber">
+            <input class="button" id="button" type="submit" value="Try me!">
+        </div>
+    </div>
+    <script>
+
+        let firstNumber = document.getElementById('firstNumber');
+        let secondNumber = document.getElementById('secondNumber');
+        let operation = document.getElementById('operation');
+        let interaction = document.getElementById('button');
+
+        setInterval(function()
+        {
+            alert('Please, use me...');
+        }, 30000); //30000 milliseconds are 30 seconds
+
+        interaction.addEventListener('click', function(){
+            const num1 = parseFloat(firstNumber.value);
+            const num2 = parseFloat(secondNumber.value);
+            const op = operation.value;
+
+            if (num1 < 0 || num2 < 0)
+            {
+                alert('Error: (Numbers should be greater than 0.)');
+                return;
+            }
+            
+            let result;
+
+            switch (op){
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 'sub':
+                result = num1 - num2;
+                break;
+            case 'multi':
+                result = num1 * num2;
+                break;
+            case 'div':
+                if (num2 === 0)
+                    result = "It's over 9000!";
+                else
+                    result = num1 / num2;
+                break;
+            case 'mod':
+                if (num2 === 0)
+                    result = "It's over 9000!";
+                else
+                    result = num1 % num2;
+                break;
+            default:
+                result = 'Error';
+        }
+            console.log(result);
+            alert(result);
+        })
+    </script>
+</body>
+</html>

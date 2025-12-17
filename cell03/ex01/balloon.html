@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 95vh;
+        }
+
+        #balloon{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon"></div>
+    <script>
+        const balloon = document.getElementById('balloon');
+
+        let size = 200;
+        let color = 'red';
+
+        balloon.addEventListener('mouseleave', function()
+        {
+            if (size > 200)
+            {
+                size -= 5;
+                balloon.style.width = size + 'px';
+                balloon.style.height = size + 'px';
+            }
+            if (color === 'red')
+            {
+                color = 'blue';
+            }
+            else if (color === 'blue')
+            {
+                color = 'green';
+            }
+            else if (color === 'green')
+            {
+                color = 'red';
+            }
+            balloon.style.backgroundColor = color;
+        })
+        
+        balloon.addEventListener('click', function()
+        {
+            size += 10;
+            balloon.style.width = size + 'px';
+            balloon.style.height = size + 'px';
+            if (size > 420)
+            {
+                size = 200;
+                balloon.style.width = size + 'px';
+                balloon.style.height = size + 'px';
+            }
+
+            if (color === 'red')
+            {
+                color = 'green';
+            }
+            else if (color === 'green')
+            {
+                color = 'blue';
+            }
+            else if (color === 'blue')
+            {
+                color = 'red';
+            }
+            balloon.style.backgroundColor = color;
+        })
+    </script>
+</body>
+</html>
